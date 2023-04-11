@@ -36,13 +36,13 @@ function App() {
       <div id="container">
         <h1>Get ready for the Puppy Bowl!</h1>
         <div id="navbar">
-          <Link to="/roster">Puppy Roster</Link>
           <Link to="/finder">Search Puppy</Link>
+          <Link to="/roster">Puppy Roster</Link>
         </div>
         <div id="main-section">
           <Routes>
-            <Route path="/roster" element={<Roster />}/>
             <Route path="/finder" element={<Finder />}/>
+            <Route path="/roster" element={<Roster />}/>
             <Route path="/" element={<Finder />}/>
           </Routes>
         </div>
