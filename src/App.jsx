@@ -1,27 +1,25 @@
 import './App.css';
 import Finder from "./Finder";
-import Roster from "./Roster";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import AllDogs from './components/AllDogs';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
   return (
-    <BrowserRouter>
       <div id="container">
         <h1>Get ready for the Puppy Bowl!</h1>
         <div id="navbar">
           <Link to="/finder">Search Puppy</Link>
-          <Link to="/roster">Puppy Roster</Link>
+          <Link to="/alldogs">Puppy Roster</Link>
         </div>
         <div id="main-section">
           <Routes>
             <Route path="/finder" element={<Finder />}/>
-            <Route path="/roster" element={<Roster />}/>
-            <Route path="/" element={<Finder />}/>
+            <Route path="/alldogs" element={<AllDogs />}/>
+            <Route path="/" element={<AllDogs />}/>
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
