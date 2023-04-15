@@ -11,12 +11,43 @@ export async function fetchDogs() {
   }
 }
 
-export async function fetchSingleDog(id) {
+export const fetchSingleDog = async (playerId) => {
   try {
-    const response = await fetch(`${baseUrl}/${id}`);
-    const singleDog = await response.json();
-    return singleDog;
+    const response = await fetch(`${baseUrl}/${playerId}`);
+    const result = await response.json();
+    return result.data.player;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export async function newPlayer(name, breed) {
+  try {
+    const response = await fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        breed,
+      }),
+    });
+    const createPlayer = await response.json();
+    return createPlayer;
   } catch (error) {
     console.error(error);
   }
 }
+
+export const removeDog = async (playerId) => {
+  try {
+    const response = await fetch(`${baseUrl}/${playerId}`, {
+      method: "Delete",
+    });
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
+};

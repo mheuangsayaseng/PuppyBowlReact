@@ -1,29 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import {useState, useEffect} from "react";
 import { fetchSingleDog } from "../api";
 import { useParams } from "react-router-dom";
 
 export default function SingleDog() {
-    const { dogId } = useParams();
-    const [dog, setDog] = useState(null);
+    const [singlePlayer, setSinglePlayer] = useState({});
+    const {dogId} = useParams ();
 
     useEffect(() => {
-        async function getDog() {
-            const dogFromApi = await fetchSingleDog(dogId);
-            setDog(dogFromApi);
+        async function playerDetails(){
+            setSinglePlayer(await fetchSingleDog(dogId));
         }
-        getDog();
-    },[])
-
-    console.log("Dog: ", dog);
+        playerDetails()
+    },[]);
 
     return (
         <div>
-            {dog && (
-                <ul>
-                    <li>Name: {dog.name}</li>
-                    <li>Breed: {dog.breed}</li>
-                </ul>
-            )}
+            <h2>ID NO. {singlePlayer.id}</h2>
+            <img style={{height: '300px', borderRadius: '5%', margin: '5px'}} src={singlePlayer.imageUrl}/>
+            <h2>Name: {singlePlayer.name}</h2>
+            <h2>Breed: {singlePlayer.breed}</h2>
         </div>
-    );
+    )
 }
+
