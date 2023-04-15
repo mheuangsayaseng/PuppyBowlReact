@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { newPlayer } from "../api";
+import { useNavigate } from "react-router-dom";
 
 export default function NewDogForm() {
     const [newName, setNewName] = useState("");
     const [newBreed, setNewBreed] = useState("");
+    const navigate = useNavigate();
 
     return (
         <div>
