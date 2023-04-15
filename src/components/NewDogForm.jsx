@@ -13,7 +13,8 @@ export default function NewDogForm() {
             <br></br>
             <form onSubmit={async (e)=>{
                 e.preventDefault();
-                const newPuppy = await newPlayer(newName, newBreed);
+                await newPlayer(newName, newBreed);
+                navigate('/');
                 }}>
 
                 <label>Name:</label>

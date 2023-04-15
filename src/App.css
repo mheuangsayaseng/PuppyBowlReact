@@ -31,6 +31,8 @@ a:hover {
   nav {
     margin-bottom: 5rem;
     font-size: 24pt;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .playerCards {

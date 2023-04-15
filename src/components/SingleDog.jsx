@@ -15,10 +15,10 @@ export default function SingleDog() {
     },[]);
 
     return (
-        <div>
+        <div style={{backgroundColor: 'tan', margin: '10px', borderRadius:'10px'}}>
             <h2>ID NO. {singlePlayer.id}</h2>
-            <img style={{height: '300px', borderRadius: '5%', margin: '5px'}} src={singlePlayer.imageUrl}/>
-            <h2>Name: {singlePlayer.name}</h2>
+            <img style={{height: '500px', borderRadius: '5%', margin: '10px', border: '4pt solid white'}} src={singlePlayer.imageUrl}/>
+            <h2 style={{margin: '5px'}}>Name: {singlePlayer.name}</h2>
             <h2>Breed: {singlePlayer.breed}</h2>
         </div>
     )
