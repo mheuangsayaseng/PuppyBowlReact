@@ -10,3 +10,13 @@ export async function fetchDogs() {
     console.error(error);
   }
 }
+
+export async function fetchSingleDog(id) {
+  try {
+    const response = await fetch(`${baseUrl}/${id}`);
+    const singleDog = await response.json();
+    return singleDog;
+  } catch (error) {
+    console.error(error);
+  }
+}

@@ -1,44 +1,7 @@
 * {
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     margin: 0;
-}
-
-#container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#container > div {
-    display: flex;
-}
-
-#navbar {
-    padding-top: 1rem;
-    justify-content: space-evenly;
-    font-size: 16pt;
-    text-decoration: none;
-}
-
-.finder input {
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 2px;
-    font-size: 16px;
-}
-
-.finder button{
-    width: 250px;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 12px;
-    color: white;
-    background-color: burlywood;
-    margin: 10px;
-    cursor: pointer;
 }
 
 a {
@@ -51,13 +14,32 @@ a:hover {
     color: #535bf2;
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 2;
-}
+#root {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
 
-.playerCards {
-    background-color: brown;
+  body {
+    margin: 0;
     display: flex;
-    flex-direction: column;
-}
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  nav {
+    margin-bottom: 5rem;
+    font-size: 24pt;
+  }
+
+  .playerCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: 200px;
+    margin: 2.5px;
+  }
