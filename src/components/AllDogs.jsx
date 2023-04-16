@@ -20,17 +20,16 @@ export default function AllDogs() {
         <div className="playerCards">
             {dogs.map((dog) => {
                 return (
-                    <div style={{backgroundColor: 'tan', margin: '10px', borderRadius:'10px'}} key={dog.id}>
-                        <h2 style={{marginTop: '15px'}}>{dog.name}</h2>
-                        <img style={{height: '300px', borderRadius: '5%', margin: '10px', border: '2pt solid white'}} src={dog.imageUrl}/>
+                    <div style={{margin: '10px', padding:'5px', borderRadius:'10px', boxShadow: '0 4px 10px black' }} key={dog.id}>
+                        <h2 style={{marginTop: '15px', color: 'black'}}>{dog.name}</h2>
+                        <img style={{height: '300px', borderRadius: '10px', margin: '10px', border: '1.5pt solid black'}} src={dog.imageUrl}/>
                         <br></br>
                         <button style={{margin: '5px'}} onClick={() => {navigate(`/${dog.id}`);}}>Player Details</button>
                         <br></br>
-                        <button style={{marginBottom: '15px'}} onClick={async () => {await removeDog(dog.id); navigate('/')}}>Remove Player</button>
+                        <button style={{marginBottom: '15px'}} onClick={() => removeDog(dog.id)}>Remove Player</button>
                     </div>
                 )
             })}
         </div>
     )
 };
-

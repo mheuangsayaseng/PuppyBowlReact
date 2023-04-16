@@ -8,21 +8,21 @@ export default function NewDogForm() {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <h2>Add your puppy to the team!</h2>
-            <br></br>
-            <form onSubmit={async (e)=>{
-                e.preventDefault();
-                await newPlayer(newName, newBreed);
-                navigate('/');
+        <div className="newPlayerForm">
+            <h2 style={{marginBottom: '50px'}}>Add your favorite puppy to the team!</h2>
+            <div id="playerInput">
+                <form onSubmit={async (e)=> {
+                    e.preventDefault();
+                    await newPlayer(newName, newBreed);
+                    navigate('/');
                 }}>
-
-                <label>Name:</label>
-                <input type="text" onChange={(e) => setNewName(e.target.value)}/>
-                <label>Breed:</label>
-                <input type="text" onChange={(e) => setNewBreed(e.target.value)}/>
-                <button>Join!</button>
-            </form>
+                    <label>Name:</label>
+                    <input type="text" onChange={(e) => setNewName(e.target.value)}/>
+                    <label>Breed:</label>
+                    <input type="text" onChange={(e) => setNewBreed(e.target.value)}/>
+                    <button style={{width:'150px'}}>Join!</button>
+                </form>
+            </div>
         </div>
     )
 }

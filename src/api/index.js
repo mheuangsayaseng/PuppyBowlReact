@@ -42,6 +42,7 @@ export async function newPlayer(name, breed) {
 
 export const removeDog = async (playerId) => {
   try {
+    console.log("Remove Player ID", playerId);
     const response = await fetch(`${baseUrl}/${playerId}`, {
       method: "Delete",
     });

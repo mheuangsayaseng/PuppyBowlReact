@@ -7,17 +7,21 @@ import { Routes, Route, Link } from "react-router-dom";
 function App() {
 
   return (
-      <div className="App">
-        <nav>
-          <Link style={{}} to="/">Home</Link>
-          {/* <br></br> */}
-          <Link to="/NewDogForm">ADD DOG</Link>
-        </nav>
-          <Routes>
-            <Route path="/" element={<AllDogs />} />
-            <Route path="/:dogId" element={<SingleDog />} />
-            <Route path="/NewDogForm" element={<NewDogForm />} />
-          </Routes>
+      <div id="App">
+          <div id='navBar'>
+            <h1>Welcome to the Puppy Bowl!</h1>
+            <nav>
+              <Link to="/">Home</Link>
+              <Link to="/NewDogForm">New Player</Link>
+            </nav>
+          </div>
+          <div id='mainContent'>
+            <Routes>
+              <Route path="/" element={<AllDogs />} />
+              <Route path="/:dogId" element={<SingleDog />} />
+              <Route path="/NewDogForm" element={<NewDogForm />} />
+            </Routes>
+          </div>
       </div>
   );
 };
