@@ -21,9 +21,9 @@ export default function NewDogForm() {
                     <input type="text" onChange={(e) => setNewName(e.target.value)}/>
                     <label>Breed:</label>
                     <input type="text" onChange={(e) => setNewBreed(e.target.value)}/>
+                    <br></br>
+                    <button id="joinTeam" style={{width:'150px', marginTop:'2rem'}}>Let's Go!</button>
                 </form>
-                <br></br>
-                <button id="joinTeam" style={{width:'150px'}}>Let's Go!</button>
             </div>
         </div>
     )
