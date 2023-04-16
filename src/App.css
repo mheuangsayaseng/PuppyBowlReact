@@ -86,24 +86,3 @@ label {
   font-weight: bold;
   margin: 10px;
 }
-
-@media (max-width: 400px) {
-  nav {
-    display: flex;
-    flex-basis: auto;
-    font-size: 14pt;
-  }
-
-  h1 {
-    font-size: 16pt;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .newPlayerForm > h2 {
-    font-size: 12pt;
-  }
-  }
