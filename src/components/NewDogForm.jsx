@@ -15,13 +15,13 @@ export default function NewDogForm() {
                 <form onSubmit={async (e)=> {
                     e.preventDefault();
                     await newPlayer(newName, newBreed);
-                    navigate('/');
+                    navigate('/AllDogs');
                 }}>
                     <label>Name:</label>
                     <input type="text" onChange={(e) => setNewName(e.target.value)}/>
                     <label>Breed:</label>
                     <input type="text" onChange={(e) => setNewBreed(e.target.value)}/>
-                    <button style={{width:'150px'}}>Join!</button>
+                    <button style={{width:'150px'}}>Let's Go!</button>
                 </form>
             </div>
         </div>

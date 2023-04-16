@@ -11,15 +11,15 @@ function App() {
           <div id='navBar'>
             <h1>Welcome to the Puppy Bowl!</h1>
             <nav>
-              <Link to="/">Home</Link>
-              <Link to="/NewDogForm">New Player</Link>
+              <Link to="/AllDogs">ALL Players</Link>
+              <Link to="/">Join Team</Link>
             </nav>
           </div>
           <div id='mainContent'>
             <Routes>
-              <Route path="/" element={<AllDogs />} />
+              <Route path="/AllDogs" element={<AllDogs />} />
               <Route path="/:dogId" element={<SingleDog />} />
-              <Route path="/NewDogForm" element={<NewDogForm />} />
+              <Route path="/" element={<NewDogForm />} />
             </Routes>
           </div>
       </div>

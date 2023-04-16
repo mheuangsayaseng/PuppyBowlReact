@@ -42,13 +42,16 @@ export async function newPlayer(name, breed) {
 
 export const removeDog = async (playerId) => {
   try {
-    console.log("Remove Player ID", playerId);
     const response = await fetch(`${baseUrl}/${playerId}`, {
-      method: "Delete",
+      method: "DELETE",
     });
     const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error(error);
+    if (result.error) throw result.error;
+    return;
+  } catch (err) {
+    console.error(
+      `Whoops, trouble removing player #${playerId} from the roster!`,
+      err
+    );
   }
 };

@@ -72,8 +72,10 @@ nav {
 }
 
 button {
-  width: 200px;
   margin: 2.5px;
+  width: 200px;
+  height: 25px;
+  border-radius: 3px;
 }
 
 button:hover {

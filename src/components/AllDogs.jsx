@@ -26,7 +26,15 @@ export default function AllDogs() {
                         <br></br>
                         <button style={{margin: '5px'}} onClick={() => {navigate(`/${dog.id}`);}}>Player Details</button>
                         <br></br>
-                        <button style={{marginBottom: '15px'}} onClick={() => removeDog(dog.id)}>Remove Player</button>
+                        <button onClick={async () => {
+                            await removeDog(dog.id);
+                            const response = await fetchDogs();
+                            if (response.success) {
+                                setDogs(response.data.players);
+                            } else {
+                                setError(response.error);
+                            }
+                        }}>Remove Player</button>
                     </div>
                 )
             })}
