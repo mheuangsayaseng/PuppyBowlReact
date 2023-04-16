@@ -9,6 +9,7 @@ export default function NewDogForm() {
 
     return (
         <div className="newPlayerForm">
+            <img style={{height:'200px'}} src="https://cdn.shopify.com/s/files/1/1061/1924/products/Dog_Emoji_large.png?v=1571606065" />
             <h2 style={{marginBottom: '50px'}}>Add your favorite puppy to the team!</h2>
             <div id="playerInput">
                 <form onSubmit={async (e)=> {
